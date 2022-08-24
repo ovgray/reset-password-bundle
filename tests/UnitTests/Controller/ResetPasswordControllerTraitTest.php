@@ -99,7 +99,7 @@ class ResetPasswordControllerTraitTest extends TestCase
 
     public function testSetsResetTokenInSession(): void
     {
-        $token = new ResetPasswordToken('1234', new \DateTimeImmutable(), 1234);
+        $token = new ResetPasswordToken('1234', new \DateTimeImmutable(), new \DateTimeImmutable());
 
         $this->mockSession
             ->expects($this->once())
@@ -113,7 +113,7 @@ class ResetPasswordControllerTraitTest extends TestCase
 
     public function testGetsResetTokenFromSession(): void
     {
-        $token = new ResetPasswordToken('1234', new \DateTimeImmutable(), 1234);
+        $token = new ResetPasswordToken('1234', new \DateTimeImmutable(), new \DateTimeImmutable());
 
         $this->mockSession
             ->expects($this->once())
